@@ -122,7 +122,7 @@ client.on('message', message => {
   if (message.content.startsWith('.avatar')) {
     const user = message.mentions.users.first() || message.author;
     const avatarURL = user.avatarURL({ format: 'png', dynamic: true, size: 2048 });
-    const embedURL = `https://rauf.wtf/embed/?title=_%author=${user.username}&color=${embedColor}&image=${avatarURL}&redirect=embed.vip`
+    const embedURL = `https://rauf.wtf/embed/?title=_&author=${user.username}&color=${embedColor}&image=${avatarURL}&redirect=embed.vip`
     if (avatarURL) {
       message.channel.send(verticalBars + 
           `${String.fromCharCode(8203)}||${embedURL}`);
