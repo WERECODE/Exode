@@ -61,6 +61,9 @@ client.on('messageUpdate', (oldMessage, newMessage) => {
 
 // Snipe Deleted
 client.on('messageDelete', async message => {
+    if (message.author === client.user) {
+  return;
+}
   try {
     deletedMessages.set(message.channel.id, message);
     console.log(`${message.author.username} Deleted: ${message.content}`);
