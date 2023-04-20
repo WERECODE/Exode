@@ -165,7 +165,7 @@ client.on('message', message => {
   client.on('messageCreate', message => {
     if (message.author.bot) return;
     
-    if (message.content.startsWith('.changeavatar')) {
+    if (message.content.startsWith('.setpfp')) {
       const newAvatarUrl = message.content.split(' ')[1];
       if (!newAvatarUrl) {
         return message.reply('Please provide a valid URL for the new avatar.');
